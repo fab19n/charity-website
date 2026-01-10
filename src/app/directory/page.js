@@ -30,100 +30,17 @@ export default function Home() {
           </button>
         </nav>
       </header>
-
-      {/* Hero Section */}
-      <section className="hero-bg bg-gradient-to-br from-blue-50 to-white py-60">
+	
+	  {/* Hero Section */}
+      <section className="hero-bg bg-gradient-to-br from-blue-50 to-white py-16">
         <div className="container mx-auto px-4 text-center">
-
-          <h2 className="text-3xl font-sm-bold text-[#6A89A7] mb-4 text-shadow-md-gray-700">
-            Launching Q1 2026
-          </h2><br/><br/>
-
-          <h1 className="text-5xl font-bold text-gray-900 mb-4">
-            Check My Charity
-          </h1>
-
-          <p className="text-xl text-gray-600 mb-5 max-w-2xl mx-auto">
-            Connecting genuine needs with people who want to help.
-          </p>
-
-          <div className="flex gap-4 justify-center flex-wrap mt-10">
-            <Link href="/directory" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold flex items-center gap-2 shadow-lg transition-all">
-              I Want to Help <ArrowRight className="w-5 h-5" />
-            </Link>
-            <Link href="/apply" className="bg-white hover:bg-gray-50 text-blue-600 border-2 border-blue-600 px-8 py-4 rounded-lg font-semibold transition-all">
-              I Need Help
-            </Link>
-          </div>
-
-          {/* Trust Badges */}
-          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            <div className="flex flex-col items-center gap-2">
-              <ShieldCheck className="w-10 h-10 text-green-600" />
-              <span className="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full shadow-md">Verified Independently</span>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <img 
-                src="/icons/no_fees.svg" 
-                alt="Banknote Icon" 
-                className="w-10 h-10"
-              />
-              <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full shadow-md">
-                No Fees
-              </span>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <HandHeart className="w-10 h-10 text-purple-600" />
-              <span className="bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full shadow-md">Direct Giving</span>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <ScanEye className="w-10 h-10 text-orange-400" />
-              <span className="bg-orange-100 text-orange-800 text-xs font-semibold px-3 py-1 rounded-full shadow-md">100% Transparent</span>
-            </div>
-          </div>
+          <h1 className="text-5xl font-bold text-gray-900 mb-4">Featured Verified Cases</h1>
         </div>
       </section>
-
-      {/* Foreword */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4 max-w-7xl">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">Why We Care</h2>
-            <p className="text-gray-700 mb-4 leading-relaxed">At 27Advisory, we have always believed that meaningful impact begins with clarity, integrity, and action. Over the years, we have met many people and organisations who genuinely want to help—individual donors, corporate CSR teams, 
-            and compassionate Malaysians who simply wish to make a difference. Yet one common concern continues to surface: 
-            "I want to help, but I don't know where to start… and I don't know which cases are genuine."</p>
-            
-            <p className="text-gray-700 mb-4 leading-relaxed">In today's world, countless individuals and community groups are silently struggling—single mothers, small welfare homes, rural communities, and grassroots 
-            organisations with limited visibility. Many lack platforms to tell their stories or channels to reach those who can offer support. At the same time, donors often 
-            hesitate because they cannot easily verify the legitimacy of these appeals.</p>
-            
-            <p className="text-gray-700 mb-4 leading-relaxed">This is where we believe 27Advisory can contribute.</p>
-            
-            <p className="text-gray-700 mb-4 leading-relaxed">As a management consulting firm grounded in structure, due diligence, and responsible governance, we saw an opportunity to use our strengths for social good. 
-            Our CSR initiative aims to bridge the gap between those who want to help and those who genuinely need help—through a transparent, verified, and accessible platform.</p>
-            
-            <p className="text-gray-700 mb-4 leading-relaxed">This platform does not collect funds and does not act as an intermediary for donations. Instead, it serves as a trusted connector. 
-            We conduct independent verification to validate the authenticity, background, and needs of every organisation or individual before they are listed. 
-            Once a case is verified, donors can reach out directly to provide support—whether monetary assistance, goods, services, or other forms of help.</p>
-            
-            <p className="text-gray-700 mb-4 leading-relaxed">Our role is simple:<br />
-            We verify. We connect. The community supports.</p>
-            
-            <p className="text-gray-700 mb-4 leading-relaxed">Through this initiative, we hope to give donors confidence, give beneficiaries visibility, and give communities a reliable space where compassion meets accountability.
-            This CSR programme reflects our belief that every organisation—regardless of size or industry—has a part to play in uplifting society. By creating a platform that 
-            enables genuine giving, we aspire to make the act of helping easier, safer, and more immediate for everyone.</p>
-            
-            <p className="text-gray-700 mb-4 leading-relaxed">Together, we can build a more connected and caring Malaysia.</p>
-            
-            <p className="text-gray-700 mb-4 leading-relaxed">27Advisory</p>
-          </div>
-        </div>
-      </section>
-        
+	  
       {/* Featured Listings */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">Featured Verified Cases</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {/* Sample Listing Card 1 */}
             <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
