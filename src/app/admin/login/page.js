@@ -2,9 +2,10 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { ShieldCheck, AlertCircle } from 'lucide-react';
+import { ShieldCheck, AlertCircle, User, Lock } from 'lucide-react';
 
 export default function AdminLogin() {
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
@@ -21,18 +22,19 @@ export default function AdminLogin() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ password }),
+        body: JSON.stringify({ username, password }),
       });
 
       const result = await response.json();
 
       if (result.success) {
-        // Store auth token in localStorage
+        // Store auth token and admin info in localStorage
         localStorage.setItem('adminAuth', result.token);
+        localStorage.setItem('adminInfo', JSON.stringify(result.admin));
         // Redirect to admin dashboard
         router.push('/admin');
       } else {
-        setError('Invalid password');
+        setError(result.message || 'Invalid credentials');
       }
     } catch (err) {
       setError('Login failed. Please try again.');
@@ -50,26 +52,54 @@ export default function AdminLogin() {
             <ShieldCheck className="w-12 h-12 text-white" />
           </div>
           <h1 className="text-3xl font-bold text-gray-900 mb-2">Verification Portal</h1>
-          <p className="text-gray-600">Check My Charity - Verification Portal</p>
+          <p className="text-gray-600">Check My Charity - Admin Login</p>
         </div>
 
         {/* Login Form */}
         <div className="bg-white rounded-2xl shadow-xl p-8">
           <form onSubmit={handleSubmit}>
+            {/* Username Field */}
+            <div className="mb-5">
+              <label htmlFor="username" className="block text-sm font-semibold text-gray-700 mb-2">
+                Username or Email
+              </label>
+              <div className="relative">
+                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  <User className="h-5 w-5 text-gray-400" />
+                </div>
+                <input
+                  type="text"
+                  id="username"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                  required
+                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="Enter username or email"
+                  autoComplete="username"
+                />
+              </div>
+            </div>
+
+            {/* Password Field */}
             <div className="mb-6">
               <label htmlFor="password" className="block text-sm font-semibold text-gray-700 mb-2">
-                Admin Password
+                Password
               </label>
-              <input
-                type="password"
-                id="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="Enter admin password"
-                autoComplete="current-password"
-              />
+              <div className="relative">
+                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  <Lock className="h-5 w-5 text-gray-400" />
+                </div>
+                <input
+                  type="password"
+                  id="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
+                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="Enter password"
+                  autoComplete="current-password"
+                />
+              </div>
             </div>
 
             {error && (
@@ -81,7 +111,7 @@ export default function AdminLogin() {
 
             <button
               type="submit"
-              disabled={loading || !password}
+              disabled={loading || !username || !password}
               className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white py-3 rounded-lg font-semibold transition-colors"
             >
               {loading ? 'Logging in...' : 'Access Admin Dashboard'}

@@ -25,11 +25,11 @@ export default function About() {
           </Link>
           <div className="hidden md:flex gap-6">
             <Link href="/" className="text-gray-600 hover:text-blue-600">Home</Link>
-            <Link href="/pages/how-it-works" className="text-gray-600 hover:text-blue-600">How It Works</Link>
-            <Link href="/pages/directory" className="text-gray-600 hover:text-blue-600">Directory</Link>
-            <Link href="/pages/admin" className="text-gray-600 hover:text-blue-600">Verification</Link>
-            <Link href="/pages/about" className="text-gray-600 hover:text-blue-600">About</Link>
-			<Link href="/pages/apply" className="text-gray-600 hover:text-blue-600">Apply for Help</Link>
+            <Link href="/how-it-works" className="text-gray-600 hover:text-blue-600">How It Works</Link>
+            <Link href="/directory" className="text-gray-600 hover:text-blue-600">Directory</Link>
+            <Link href="/admin" className="text-gray-600 hover:text-blue-600">Verification</Link>
+            <Link href="/about" className="text-gray-600 hover:text-blue-600">About</Link>
+			      <Link href="/apply" className="text-gray-600 hover:text-blue-600">Apply for Help</Link>
           </div>
         </nav>
       </header>
@@ -76,8 +76,24 @@ export default function About() {
           </div>
         </div>
       </section>
-	  
-	        {/* Footer */}
+
+      {/* CTA Section */}
+      <section className="py-16 bg-gray-900 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
+          <p className="text-xl mb-8 opacity-90">Whether you want to help or need assistance, we're here for you.</p>
+          <div className="flex gap-4 justify-center flex-wrap">
+            <Link href="/directory" className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+              Browse Cases
+            </Link>
+            <Link href="/apply" className="bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-800 transition-colors border-2 border-white">
+              Apply for Help
+            </Link>
+          </div>
+        </div>
+      </section>	  
+
+	    {/* Footer */}
       <footer className="border-t border-gray-800 pt-8 bg-gray-900 text-white py-12">
         <div className="container mx-auto px-7">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
