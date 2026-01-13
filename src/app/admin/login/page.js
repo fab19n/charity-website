@@ -123,11 +123,17 @@ export default function AdminLogin() {
               This area is restricted to authorized personnel only.
             </p>
           </div>
+          {/* Register */}
+          <div className="mt-6 text-center text-sm">
+            <a href="/internal/admin-register" className="text-sm text-gray-600 hover:text-orange-600 underline decoration-2 decoration-gray-600 hover:decoration-2 hover:decoration-orange-600">
+              Register as Admin
+            </a>
+          </div>
         </div>
 
         {/* Back to Home */}
         <div className="text-center mt-6">
-          <a href="/" className="text-sm text-gray-600 hover:text-blue-600">
+          <a href="/" className="text-x text-blue-600 text-blue-600 font-medium">
             ← Back to Home
           </a>
         </div>

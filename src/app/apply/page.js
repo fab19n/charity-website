@@ -2,7 +2,8 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Upload, CheckCircle, AlertCircle, FileText, Phone, Mail, MapPin, DollarSign, Building, User, ArrowRight, X } from 'lucide-react';
+import { HeartHandshake, LinkIcon, Handshake, Upload, CheckCircle, AlertCircle, FileText, Phone, Mail, MapPin, DollarSign, Building, User, ArrowRight, X } from 'lucide-react';
+
 
 export default function ApplyPage() {
 	  const [formData, setFormData] = useState({
@@ -152,14 +153,17 @@ export default function ApplyPage() {
   if (submitStatus === 'success') {
     return (
       <div className="min-h-screen bg-white">
-        {/* Header */}
-        <header className="border-b bg-white">
-          <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">C</span>
-              </div>
-              <span className="font-bold text-xl text-gray-600">Check My Charity</span>
+
+      {/* Header */}
+      <header className="border-b sticky top-0 bg-white z-50">
+        <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
+          <Link href="/" className="flex items-center gap-2">
+            <img 
+              src="/icons/cmyc-logo.svg" 
+              alt="CMYC Logo" 
+              className="w-8 h-8"
+            />
+		  <span className="font-bold text-xl text-gray-600">Check My Charity</span>
             </Link>
           </nav>
         </header>
@@ -211,9 +215,11 @@ export default function ApplyPage() {
       <header className="border-b bg-white">
         <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
           <Link href="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">C</span>
-            </div>
+            <img 
+              src="/icons/cmyc-logo.svg" 
+              alt="CMYC Logo" 
+              className="w-8 h-8"
+            />
             <span className="font-bold text-xl text-gray-600">Check My Charity</span>
           </Link>
           <Link href="/" className="text-gray-600 hover:text-blue-600">
@@ -769,11 +775,60 @@ export default function ApplyPage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-8 mt-12">
-        <div className="container mx-auto px-4 text-center">
-          <p className="text-gray-400 text-sm">© 2024 Check My Charity - A 27Advisory CSR Initiative</p>
+      <footer className="border-t border-gray-800 pt-8 bg-gray-900 text-white py-12">
+        <div className="container mx-auto px-7">
+          <div className="grid md:grid-cols-4 gap-8 mb-8">
+            <div>
+              <div className="flex items-center gap-2 mb-4">
+                <HeartHandshake className="w-6 h-6" />
+                <span className="font-bold">Check My Charity</span>
+              </div>
+              <ul className="space-y-2 text-gray-400 text-sm">
+                <p className="hover:text-white">A 27Advisory CSR Initiative</p>
+                <li><Link href="/policy" className="hover:text-white">Policy, Disclaimer & Verification Statement</Link></li>
+              </ul>                    
+            </div>
+            <div>
+              <div className="flex items-center gap-2 mb-4">
+                <LinkIcon className="w-6 h-6" />
+                <span className="font-bold">Quick Links</span>
+              </div>
+              <ul className="space-y-2 text-gray-400 text-sm">
+                <li><Link href="/about" className="hover:text-white">About Us</Link></li>
+                <li><Link href="/how-it-works" className="hover:text-white">How It Works</Link></li>
+                {/*<li><Link href="/verification" className="hover:text-white">Verification Process</Link></li>*/}
+              </ul>
+            </div>
+            <div>
+              <div className="flex items-center gap-2 mb-4">
+                <Handshake className="w-6 h-6" />
+                <span className="font-bold">Get Involved</span>
+              </div>
+              <ul className="space-y-2 text-gray-400 text-sm">
+                <li><Link href="/directory" className="hover:text-white">Browse Directory</Link></li>
+                <li><Link href="/apply" className="hover:text-white">Apply for Help</Link></li>
+                <li><Link href="/report" className="hover:text-white">Report an Issue</Link></li>
+              </ul>
+            </div>
+            <div>
+              <div className="flex items-center gap-2 mb-4">
+                <Phone className="w-6 h-6" />
+                <span className="font-bold">Contact Us</span>
+              </div>
+              <ul className="space-y-2 text-gray-400 text-sm">
+                <li className="flex items-center gap-2">
+                  <Mail className="w-4 h-4" />
+                  <span>cmyc@27advisory.com.my</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
+            <p>&copy; Powered by 27 Digital | IRGA Digital Sdn Bhd. <br />2026, All rights reserved. | <Link href="/terms" className="hover:text-white">Terms</Link> | <Link href="/privacy" className="hover:text-white">Privacy</Link></p>
+          </div>
         </div>
       </footer>
+ 
     </div>
   );
 }	

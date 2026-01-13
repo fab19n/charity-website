@@ -60,7 +60,7 @@ export default function Home() {
                 <p className="text-gray-600 text-sm mb-4">
                   Monthly groceries assistance needed for 28 elderly residents. RM2,800 required.
                 </p>
-                <Link href="/case/rumah-sejahtera" className="block w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-medium transition-colors text-center">
+                <Link href="/under-construction" className="block w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-medium transition-colors text-center">
                   View Details
                 </Link>
               </div>
@@ -84,7 +84,7 @@ export default function Home() {
                 <p className="text-gray-600 text-sm mb-4">
                   Help needed for school fees and uniforms for two children. RM1,200 needed.
                 </p>
-                <Link href="/case/single-mother-education" className="block w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-medium transition-colors text-center">
+                <Link href="/under-construction" className="block w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-medium transition-colors text-center">
                   View Details
                 </Link>
               </div>
@@ -108,7 +108,7 @@ export default function Home() {
                 <p className="text-gray-600 text-sm mb-4">
                   Urgent medical treatment assistance for cancer patient. RM15,000 needed.
                 </p>
-                <Link href="/case/medical-treatment" className="block w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-medium transition-colors text-center">
+                <Link href="/under-construction" className="block w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-medium transition-colors text-center">
                   View Details
                 </Link>
               </div>
@@ -150,8 +150,24 @@ export default function Home() {
         </div>
       </section>
 
+      {/* CTA Section */}
+      <section className="py-16 bg-gray-900 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
+          <p className="text-xl mb-8 opacity-90">Whether you want to help or need assistance, we're here for you.</p>
+          <div className="flex gap-4 justify-center flex-wrap">
+            <Link href="/directory" className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+              Browse Cases
+            </Link>
+            <Link href="/apply" className="bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-800 transition-colors border-2 border-white">
+              Apply for Help
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
+      <footer className="border-t border-gray-800 pt-8 bg-gray-900 text-white py-12">
         <div className="container mx-auto px-7">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
@@ -159,12 +175,10 @@ export default function Home() {
                 <HeartHandshake className="w-6 h-6" />
                 <span className="font-bold">Check My Charity</span>
               </div>
-              <p className="text-gray-400 text-sm">
-                A 27Advisory CSR Initiative
-              </p>
-              <p className="text-gray-400 text-sm">
-                Policy, Disclaimer & Verification Statement
-              </p>       
+              <ul className="space-y-2 text-gray-400 text-sm">
+                <p className="hover:text-white">A 27Advisory CSR Initiative</p>
+                <li><Link href="/policy" className="hover:text-white">Policy, Disclaimer & Verification Statement</Link></li>
+              </ul>                    
             </div>
             <div>
               <div className="flex items-center gap-2 mb-4">
@@ -174,7 +188,7 @@ export default function Home() {
               <ul className="space-y-2 text-gray-400 text-sm">
                 <li><Link href="/about" className="hover:text-white">About Us</Link></li>
                 <li><Link href="/how-it-works" className="hover:text-white">How It Works</Link></li>
-                <li><Link href="/verification" className="hover:text-white">Verification Process</Link></li>
+                {/*<li><Link href="/verification" className="hover:text-white">Verification Process</Link></li>*/}
               </ul>
             </div>
             <div>
@@ -202,7 +216,7 @@ export default function Home() {
             </div>
           </div>
           <div className="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
-            <p>&copy; Powered by 27 Digital | IRGA Digital Sdn Bhd. <br />2025, All rights reserved. | <Link href="/terms" className="hover:text-white">Terms</Link> | <Link href="/privacy" className="hover:text-white">Privacy</Link></p>
+            <p>&copy; Powered by 27 Digital | IRGA Digital Sdn Bhd. <br />2026, All rights reserved. | <Link href="/terms" className="hover:text-white">Terms</Link> | <Link href="/privacy" className="hover:text-white">Privacy</Link></p>
           </div>
         </div>
       </footer>

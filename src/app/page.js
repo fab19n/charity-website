@@ -143,7 +143,7 @@ export default function Home() {
                 <p className="text-gray-600 text-sm mb-4">
                   Monthly groceries assistance needed for 28 elderly residents. RM2,800 required.
                 </p>
-                <Link href="/case/rumah-sejahtera" className="block w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-medium transition-colors text-center">
+                <Link href="/under-construction" className="block w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-medium transition-colors text-center">
                   View Details
                 </Link>
               </div>
@@ -167,7 +167,7 @@ export default function Home() {
                 <p className="text-gray-600 text-sm mb-4">
                   Help needed for school fees and uniforms for two children. RM1,200 needed.
                 </p>
-                <Link href="/case/single-mother-education" className="block w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-medium transition-colors text-center">
+                <Link href="/under-construction" className="block w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-medium transition-colors text-center">
                   View Details
                 </Link>
               </div>
@@ -191,7 +191,7 @@ export default function Home() {
                 <p className="text-gray-600 text-sm mb-4">
                   Urgent medical treatment assistance for cancer patient. RM15,000 needed.
                 </p>
-                <Link href="/case/medical-treatment" className="block w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-medium transition-colors text-center">
+                <Link href="/under-construction" className="block w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-medium transition-colors text-center">
                   View Details
                 </Link>
               </div>
